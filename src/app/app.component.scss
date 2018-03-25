@@ -1,0 +1,49 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+%tab-btn-shared {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.heading-wrap {
+    width: 100%;
+    margin: 15px;
+}
+
+.logo {
+    width: 700px;
+}
+
+.tabs-wrap {
+    margin-top: 30px;
+}
+
+.tab {
+    border: 1px solid black;
+    border-top-right-radius: 16px;
+    margin-right: 10px;
+    padding: 5px 15px;
+}
+
+.close-tab {
+    @extend %tab-btn-shared;
+    @include border-radius(50%);
+}
+
+.new-tab {
+    @extend %tab-btn-shared;
+    border-top-right-radius: 16px;
+    margin-left: 10px;
+}
+
+.content-wrap {
+    margin-top: 30px;
+}
