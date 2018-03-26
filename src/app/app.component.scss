@@ -31,6 +31,11 @@
     border-top-right-radius: 16px;
     margin-right: 10px;
     padding: 5px 15px;
+    cursor: pointer;
+
+    &.active {
+        background-color: lightgreen;
+    }
 }
 
 .close-tab {
@@ -46,4 +51,12 @@
 
 .content-wrap {
     margin-top: 30px;
+}
+
+.page {
+    display: none;
+
+    &.active {
+        display: block;
+    }
 }

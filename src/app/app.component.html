@@ -8,12 +8,12 @@
   <img class="logo" alt="ScaleFocus Logo" src="http://fusionacademy.bg/wp-content/uploads/team/16996/2014/09/Fusion_Academy_ScaleFocus-logo3.png">
 </div>
 <div class="container">
-  <div class="tabs-wrap">
+  <div id="tabs-wrap" class="tabs-wrap">
     <div class="row">
-      <div class="col col-2 tab">
+      <div id="tab-1" class="col col-2 tab active" (click)="makeTabActive($event)">
         <div class="row">
           <div class="col col-9 tab-name">
-            tab 1
+            tab-1
           </div>
           <div class="col col-2 close-tab">
             <button (click)="closeTab($event)" class="btn btn-primary btn-close">X</button>
@@ -25,16 +25,18 @@
       </div>
     </div>
   </div>
-  <div class="content-wrap">
-    <div class="row">
-      <div id="buttons">
-        <label>
-          <input id="query" type="text" />
-          <button id="search-button" disabled (click)="search()">Search</button>
-        </label>
+  <div id="content-wrap" class="content-wrap">
+    <div id="page-1" class="page active">
+      <div class="row">
+        <div id="buttons">
+          <label>
+            <input id="query-1" class="input-query" type="text" />
+            <button class="search-button" disabled (click)="search($event)">Search</button>
+          </label>
+        </div>
       </div>
-    </div>
-    <div id="result-wrap">
+      <div id="result-wrap-1" class="result-wrap">
+      </div>
     </div>
   </div>
 </div>
