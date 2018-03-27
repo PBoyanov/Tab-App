@@ -2,10 +2,7 @@
 <script src="{{events}}"></script>
 
 <div class="heading-wrap text-center">
-  <h1>
-    Welcome to my app!
-  </h1>
-  <img class="logo" alt="ScaleFocus Logo" src="http://fusionacademy.bg/wp-content/uploads/team/16996/2014/09/Fusion_Academy_ScaleFocus-logo3.png">
+  <img id="logo" class="logo" alt="ScaleFocus Logo" src="http://fusionacademy.bg/wp-content/uploads/team/16996/2014/09/Fusion_Academy_ScaleFocus-logo3.png">
 </div>
 <div class="container">
   <div id="tabs-wrap" class="tabs-wrap">
@@ -15,24 +12,20 @@
           <div class="col col-9 tab-name">
             tab-1
           </div>
-          <div class="col col-2 close-tab">
-            <button (click)="closeTab($event)" class="btn btn-primary btn-close">X</button>
-          </div>
+          <button (click)="closeTab($event)" class="btn btn-close">X</button>
         </div>
       </div>
       <div id="newTabWrap" class="col col-1 new-tab">
-        <button (click)="newTab()" id="new-tab" class="btn btn-primary btn-new">+</button>
+        <button (click)="newTab()" id="new-tab" class="btn btn-new">+</button>
       </div>
     </div>
   </div>
   <div id="content-wrap" class="content-wrap">
     <div id="page-1" class="page active">
-      <div class="row">
-        <div id="buttons">
-          <label>
-            <input id="query-1" class="input-query" type="text" />
-            <button class="search-button" disabled (click)="search($event)">Search</button>
-          </label>
+      <div id="buttons">
+        <div class="row">
+          <input id="query-1" class="col col-4 input-query" type="text" />
+          <button class="col col-1 btn search-button" disabled (click)="search($event)">Search</button>
         </div>
       </div>
       <div id="result-wrap-1" class="result-wrap">

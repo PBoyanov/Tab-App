@@ -212,16 +212,20 @@ export class AppComponent implements OnInit {
         row = $("<div></div>").addClass("row");
         unorderedList.append(row);
       }
-      let videoThumbnail = resultItems[i].snippet.thumbnails.medium.url;
+      let videoThumbnail = resultItems[i].snippet.thumbnails.high.url;
       let videoTitle = resultItems[i].snippet.title;
 
       let video = $("<div></div>").addClass("video col col-4");
+      let imgWrap = $("<div></div>").addClass("thumb-wrap");
       let imgLink = $("<a></a>");
-      let img = $("<img/>").attr("src", videoThumbnail);
+      let img = $("<img/>").attr("src", videoThumbnail).addClass("video-thumb");
+      let titleWrap = $("<div></div>").addClass("video-title-wrap");
       let title = $("<h5></h5>").text(videoTitle);
       imgLink.append(img);
-      video.append(imgLink);
-      title.insertAfter(imgLink);
+      imgWrap.append(imgLink);
+      video.append(imgWrap);
+      titleWrap.append(title);
+      titleWrap.insertAfter(imgWrap);
       row.append(video);
     }
 

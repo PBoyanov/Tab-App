@@ -1,3 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'variables';
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+.video {
+    margin-bottom: 30px;
+}
+
+.video-thumb {
+    width: 100%;
+    max-height: 252px;
+}
+
+.thumb-wrap {
+    border-radius: 10%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.video-title-wrap {
+    min-height: 95px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2da253;
+    color: #333;
+}
