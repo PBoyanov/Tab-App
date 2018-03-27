@@ -3,6 +3,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 body {
+    font-size: 16px;
     background-color: lightgoldenrodyellow;
 }
 
@@ -12,7 +13,7 @@ body {
 
 .video-thumb {
     width: 100%;
-    max-height: 252px;
+    max-height: 208px;
 }
 
 .thumb-wrap {
@@ -22,8 +23,55 @@ body {
 }
 
 .video-title-wrap {
-    min-height: 95px;
+    min-height: 120px;
     padding-bottom: 10px;
     border-bottom: 3px solid #2da253;
     color: #333;
+}
+
+/* Large */
+@media screen and (max-width: 991px) {
+    
+}
+
+/* Medium */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .video-thumb {
+        max-height: 142px;
+    }
+
+    .video-title-wrap {
+        min-height: 125px;
+
+        h5 {
+            font-size: 1em;
+        }
+    }
+}
+
+/* Small */
+@media screen and (max-width: 767px) {
+    .video-thumb {
+        max-height: 102px;
+    }
+
+    .video-title-wrap {
+        min-height: 125px;
+
+        h5 {
+            font-size: 0.9em;
+        }
+    }
+}
+
+/* Extra small */
+@media screen and (max-width: 575px) {
+    .video-title-wrap {
+        height: auto;
+        min-height: 0;
+
+        h5 {
+            font-size: 0.8em;
+        }
+    }
 }

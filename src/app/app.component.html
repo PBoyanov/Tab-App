@@ -7,9 +7,9 @@
 <div class="container">
   <div id="tabs-wrap" class="tabs-wrap">
     <div class="row">
-      <div id="tab-1" class="col col-2 tab active" (click)="makeTabActive($event)">
+      <div id="tab-1" class="col col-4 col-md-2 tab active" (click)="makeTabActive($event)">
         <div class="row">
-          <div class="col col-9 tab-name">
+          <div class="col col-6 col-sm-7 col-md-8  tab-name">
             tab-1
           </div>
           <button (click)="closeTab($event)" class="btn btn-close">X</button>
@@ -25,7 +25,7 @@
       <div id="buttons">
         <div class="row">
           <input id="query-1" class="col col-4 input-query" type="text" />
-          <button class="col col-1 btn search-button" disabled (click)="search($event)">Search</button>
+          <button class="col col-4 col-sm-2 btn search-button" disabled (click)="search($event)">Search</button>
         </div>
       </div>
       <div id="result-wrap-1" class="result-wrap">

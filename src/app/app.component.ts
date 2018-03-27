@@ -215,7 +215,7 @@ export class AppComponent implements OnInit {
       let videoThumbnail = resultItems[i].snippet.thumbnails.high.url;
       let videoTitle = resultItems[i].snippet.title;
 
-      let video = $("<div></div>").addClass("video col col-4");
+      let video = $("<div></div>").addClass("video col col-12 col-sm-4");
       let imgWrap = $("<div></div>").addClass("thumb-wrap");
       let imgLink = $("<a></a>");
       let img = $("<img/>").attr("src", videoThumbnail).addClass("video-thumb");
